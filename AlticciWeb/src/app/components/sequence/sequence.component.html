@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Input</mat-label>
+    <input matInput placeholder="Value to sequence" formControlName="input">
+  </mat-form-field>
+  <button mat-button mat-raised-button (click)="call()">Sequence</button>
+  <mat-form-field appearance="fill">
+    <mat-label>Result</mat-label>
+    <input matInput formControlName="out" [value]="this.form.get('out')!.value.out">
+  </mat-form-field>
+</form>
